@@ -1,0 +1,104 @@
+﻿@model IEnumerable<ProjectCore.Logica.Models.ViewModel.TasksIndexViewModel>
+
+@{
+    ViewData["Tasks"] = "Index";
+}
+
+<h2>Projects</h2>
+@Html.ActionLink(" ", "Create", "Tasks",  new {ProjectId=ViewBag.Project.Id },new { @class = "btn btn-primary fas fa-plus-circle" })
+
+<table class="table table-bordered ">
+    <tr>
+
+        <td>
+            @Html.DisplayNameFor(model => model.Title)
+
+        </td>
+
+        <td>
+            @Html.DisplayNameFor(model => model.Details)
+
+        </td>
+
+        <td>
+            @Html.DisplayNameFor(model => model.ExpirationDate)
+
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.IsCompleted)
+
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.Effort)
+
+        </td>
+        <td>
+
+            @Html.DisplayNameFor(model => model.RemainingWork)
+
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.StateId)
+
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.ActivityId)
+
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.PriorityId)
+
+        </td>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            
+     
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Details)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpirationDate)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsCompleted)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Effort)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Effort)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RemainingWork)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StateId)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActivityId)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriorityId)
+
+            </td>
+        
+        </tr>
+    }
+
+</table>
+
